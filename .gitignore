@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-=======
 .idea/
->>>>>>> d3c274b57f6102f820b377efbc00e4c8d07dc009
 
 # Created by https://www.gitignore.io/api/python
 # Edit at https://www.gitignore.io/?templates=python
 
-<<<<<<< HEAD
-# pycharm
-.idea/
-
-=======
->>>>>>> d3c274b57f6102f820b377efbc00e4c8d07dc009
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -35,11 +26,6 @@ parts/
 sdist/
 var/
 wheels/
-<<<<<<< HEAD
-pip-wheel-metadata/
-share/python-wheels/
-=======
->>>>>>> d3c274b57f6102f820b377efbc00e4c8d07dc009
 *.egg-info/
 .installed.cfg
 *.egg
@@ -136,8 +122,6 @@ dmypy.json
 ### Python Patch ###
 .venv/
 
-<<<<<<< HEAD
-=======
 ### Python.VirtualEnv Stack ###
 # Virtualenv
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
@@ -150,5 +134,4 @@ dmypy.json
 pyvenv.cfg
 pip-selfcheck.json
 
->>>>>>> d3c274b57f6102f820b377efbc00e4c8d07dc009
 # End of https://www.gitignore.io/api/python
