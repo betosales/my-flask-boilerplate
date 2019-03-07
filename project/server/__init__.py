@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # -*- coding: utf-8 -*-
 import os
 
@@ -9,6 +10,14 @@ from flask_jwt_extended import JWTManager
 
 from flask import jsonify, make_response
 from flask_jwt_extended import fresh_jwt_required
+=======
+import os
+
+from flask import Flask
+from flask_bcrypt import Bcrypt
+from flask_cors import CORS
+from flask_sqlalchemy import SQLAlchemy
+>>>>>>> d3c274b57f6102f820b377efbc00e4c8d07dc009
 
 app = Flask(__name__)
 CORS(app)
@@ -21,6 +30,7 @@ app.config.from_object(app_settings)
 
 db = SQLAlchemy(app)
 
+<<<<<<< HEAD
 jwt = JWTManager(app)
 app.config['JWT_BLACKLIST_ENABLED'] = True
 app.config['JWT_BLACKLIST_TOKEN_CHECKS'] = ['access', 'refresh']
@@ -48,3 +58,9 @@ def index():
         'message': 'Deu certo, você conseguiu entrar'
     }
     return make_response(jsonify(response_object)), 200
+=======
+bcrypt = Bcrypt(app)
+
+from project.server.auth.views import auth_blueprint # noqa
+app.register_blueprint(auth_blueprint)
+>>>>>>> d3c274b57f6102f820b377efbc00e4c8d07dc009

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 # -*- coding: utf-8 -*-
+=======
+>>>>>>> d3c274b57f6102f820b377efbc00e4c8d07dc009
 import unittest
 
 from flask_migrate import Migrate
@@ -11,6 +14,7 @@ migrate = Migrate(app, db)
 @app.cli.command()
 def test():
     """Runs the unit tests without test coverage."""
+<<<<<<< HEAD
     if app.config['TESTING'] is not True:
         raise AttributeError('Environment testing system is not properly configured.')
     # create all tables to begin the tests
@@ -23,6 +27,10 @@ def test():
 
     # drop all tables when tests are finished
     db.drop_all()
+=======
+    tests = unittest.TestLoader().discover('project/tests', pattern='test*.py')
+    result = unittest.TextTestRunner(verbosity=2).run(tests)
+>>>>>>> d3c274b57f6102f820b377efbc00e4c8d07dc009
     if result.wasSuccessful():
         return 0
     return 1
@@ -30,19 +38,31 @@ def test():
 
 @app.cli.command()
 def create_db():
+<<<<<<< HEAD
     """Create the db tables."""
+=======
+    """Creates the db tables."""
+>>>>>>> d3c274b57f6102f820b377efbc00e4c8d07dc009
     db.create_all()
 
 
 @app.cli.command()
 def drop_db():
+<<<<<<< HEAD
     """Drop the db tables."""
+=======
+    """Drops the db tables."""
+>>>>>>> d3c274b57f6102f820b377efbc00e4c8d07dc009
     db.drop_all()
 
 
 @app.cli.command()
 def drop_migrations():
+<<<<<<< HEAD
     """Drop alembics directories and database resources."""
+=======
+    """Drops alembics directories and database resources."""
+>>>>>>> d3c274b57f6102f820b377efbc00e4c8d07dc009
     db.engine.execute("DROP TABLE IF EXISTS alembic_version CASCADE")
     import shutil
     import os
